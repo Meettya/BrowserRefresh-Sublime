@@ -18,6 +18,14 @@ class BrowserRefreshCommand(sublime_plugin.TextCommand):
                     reload active tab of window 1
                 end tell
             """ % (activate)
+            
+        if(browserName == "Google Chrome Canary"):
+            command = """
+                tell application "Google Chrome Canary"
+                    %s
+                    reload active tab of window 1
+                end tell
+            """ % (activate)
 
         elif(browserName == "Safari"):
             command = """
